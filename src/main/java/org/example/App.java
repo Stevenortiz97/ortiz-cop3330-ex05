@@ -3,11 +3,12 @@
  *  Copyright 2021 Steven Ortiz
  */
 
-//Enter a noun: dog
-//Enter a verb: walk
-// Enter an adjective: blue
-// Enter an adverb: quickly
-// Do you walk your blue dog quickly? That's hilarious!
+// What is the first number? 10
+//What is the second number? 5
+// 10 + 5 = 15
+// 10 - 5 = 5
+//10 * 5 = 50
+//10 / 5 = 2
 
 package org.example;
 
@@ -16,51 +17,45 @@ import java.util.Scanner;
 public class App {
     static Scanner in = new Scanner(System.in);
 
+    private static int numberone(){
+        System.out.print("What is the first number? ");
+        String numberone = in.nextLine();
+        int num1 = Integer.parseInt(numberone);
+        return num1;
+    }
 
+    private static int numbertwo() {
+        System.out.print("What is the second number? ");
+        String numbertwo = in.nextLine();
+        int num2 = Integer.parseInt(numbertwo);
+        return num2;
+
+
+    }
 
     public static void main(String[] args) {
 
-        String noun = nounWord();
-        String verb = verbWord();
-        String adjective = adjectiveWord();
-        String adverb = adverbWord();
+        int num1 = numberone();
+        int num2 = numbertwo();
 
-        String outputString = generateOutputString(noun,verb,adjective,adverb);
-        printOutput(outputString);
+        int sum = num1 + num2;
+        int dif = num1 - num2;
+        int mul = num1 * num2;
+        int div = num1 / num2;
+
+        System.out.println(""+num1+" + "+num2+" = "+sum);
+        System.out.println(""+num1+" - "+num2+" = "+dif);
+        System.out.println(""+num1+" * "+num2+" = "+mul);
+        System.out.println(""+num1+" / "+num2+" = "+div);
+
+
 
     }
     private static void printOutput(String outputString){
         System.out.println(outputString);
     }
 
-    private static String nounWord(){
-        System.out.print("Enter a noun: ");
-        String noun = in.nextLine();
-        return noun;
-    }
-    private static String verbWord() {
-        System.out.print("Enter a verb: ");
-        String verb = in.nextLine();
-        return verb;
-
-    }
-    private static String adjectiveWord() {
-        System.out.print("Enter an adjective: ");
-        String adjective = in.nextLine();
-        return adjective;
-    }
-
-    private static String adverbWord() {
-        System.out.print("Enter an adverb: ");
-        String adverb = in.nextLine();
-        return adverb;
-    }
 
 
-    private static String generateOutputString(String noun, String verb, String adjective, String adverb) {
 
-
-        return "Do you " + verb + " your " + adjective + " " + noun + " " + adverb + "? That's hilarious!";
-
-    }
 }
