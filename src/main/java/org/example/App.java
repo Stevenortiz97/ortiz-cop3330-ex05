@@ -23,14 +23,11 @@ public class App {
         int num1 = Integer.parseInt(numberone);
         return num1;
     }
-
     private static int numbertwo() {
         System.out.print("What is the second number? ");
         String numbertwo = in.nextLine();
         int num2 = Integer.parseInt(numbertwo);
         return num2;
-
-
     }
 
     public static void main(String[] args) {
@@ -48,14 +45,9 @@ public class App {
         System.out.println(""+num1+" * "+num2+" = "+mul);
         System.out.println(""+num1+" / "+num2+" = "+div);
 
-
-
     }
     private static void printOutput(String outputString){
         System.out.println(outputString);
     }
-
-
-
 
 }
